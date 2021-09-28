@@ -2,6 +2,11 @@
 Discord bot that can display the profile of the player ( java edition) of Minecraft
 <br>
 <br>
+Discord.js V13
+<br>
+Node.js Ver.16.6.0~
+<br>
+<br>
 You can display the player's profile with "!player [player name]"
 ## License(ライセンス)
 日本語: [MarumasaLicense v1.0 (日本語)](https://github.com/malken21/MarumasaLicenses/blob/main/MarumasaLicense_v1.0/LICENSE-ja.md)
