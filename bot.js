@@ -28,13 +28,13 @@ client.on('messageCreate', message => {
 								console.log(playerProfileJson_base64);
 								let {playerNames,date,playerTimes} = ``;
 								for(let loop = 0;loop < JSON.parse(playerNamesJson).length;loop ++){
-									date = new Date(Number(JSON.parse(playerNamesJson)[loop].changedToAt)).toString().split(" ");
 									if(loop==0){
 										playerNames = `${loop+1}. ${JSON.parse(playerNamesJson)[loop].name}`;
 										playerTimes = `none`;
 									}else{
+										date = new Date(Number(JSON.parse(playerNamesJson)[loop].changedToAt));
 										playerNames = `${playerNames}\n${loop+1}. ${JSON.parse(playerNamesJson)[loop].name}`;
-										playerTimes = `${playerTimes}\n${date[3]}/${date[2]}/${date[4]}`
+										playerTimes = `${playerTimes}\n${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}/${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
 									}
 								}
 								const minecraft_player_embed = new MessageEmbed()
